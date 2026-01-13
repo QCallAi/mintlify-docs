@@ -1,68 +1,197 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
+  "name": "AwazIndia docs",
   "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#7928ca",
+    "light": "#7928ca",
+    "dark": "#7928ca"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get Started",
+            "pages": ["index", "general/dashboard"]
+          },
+          {
+            "group": "Contacts Management CRM",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "general/contacts/contacts",
+              {
+                "group": "Segments",
+                "pages": [
+                  "general/contacts/segmentList/introduction",
+                  "general/contacts/segmentList/addContacts",
+                  "general/contacts/segmentList/modifyContacts"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Call Platforms",
+            "pages": [
+              {
+                "group": "Assistants",
+                "pages": [
+                  "general/assistants/introduction",
+                  {
+                    "group": "Create Assistant",
+                    "icon": "head-side",
+                    "pages": [
+                      "general/assistants/createAssistant",
+                      "general/assistants/assistantAction"
+                    ]
+                  },
+                  "general/assistants/testAssistant"
+                ]
+              },
+              "general/assistants/playground",
+              {
+                "group": "Dialers",
+                "pages": [
+                  "general/dialer/introduction",
+                  "general/dialer/integrateDialer"
+                ]
+              },
+              {
+                "group": "Connect via SIP trunking",
+                "pages": [
+                  "general/sip/twilio",
+                  "general/sip/telnyx",
+                  "general/sip/vonage"
+                ]
+              },
+              {
+                "group": "Campaigns",
+                "pages": [
+                  "general/campaigns/introduction",
+                  "general/campaigns/statesCampaign"
+                ]
+              },
+              "general/callLogs"
             ]
           },
           {
             "group": "Customization",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "general/profileMenu/affiliates",
+              "general/profileMenu/knowledgebase",
+              {
+                "group": "Integrations",
+                "pages": [
+                  "general/integrations/introduction",
+                  "general/integrations/hubspot",
+                  "general/integrations/salesforce",
+                  "general/integrations/smtp",
+                  {
+                    "group": "WhatsApp",
+                    "pages": [
+                      "general/integrations/whatsapp",
+                      "general/integrations/whatsappBusinessApiSetup",
+                      "general/integrations/whatsappAccessToken"
+                    ]
+                  },
+                  "general/integrations/gohighlevel",
+                  "general/integrations/elevenLabs",
+                  "general/integrations/cartesia",
+                  "general/integrations/zoho",
+                  "general/integrations/stripe",
+                  "general/integrations/rime",
+                  "general/integrations/neuphonic",
+                  "general/integrations/lmnt",
+                  "general/integrations/inworld",
+                  "general/integrations/hume"
+                ]
+              },
+              "general/profileMenu/billing",
+              "general/profileMenu/support"
             ]
           },
           {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
+            "group": "Glossary",
+            "pages": ["general/glossary/faq"]
           },
           {
-            "group": "AI tools",
+            "group": "Community",
+
+            "pages": ["general/community/videos"]
+          },
+          {
+            "group": "Legal",
+
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "general/legal/privacy_policy",
+              "general/legal/terms_and_conditions"
             ]
           }
+
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Authorization",
+            "pages": ["api-reference/authorization"]
+          },
+          {
+            "group": "Assistants",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/assistants/get",
+              "api-reference/assistants/create",
+              "api-reference/assistants/update",
+              "api-reference/assistants/delete"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Playground",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/playground/getHistory",
+              "api-reference/playground/create"
+            ]
+          },
+          {
+            "group": "Dialers",
+            "pages": [
+              "api-reference/dialers/get",
+              "api-reference/dialers/create",
+              "api-reference/dialers/update",
+              "api-reference/dialers/delete"
+            ]
+          },
+          {
+            "group": "Segments",
+            "pages": [
+              "api-reference/segments/get",
+              "api-reference/segments/create",
+              "api-reference/segments/update",
+              "api-reference/segments/delete",
+              "api-reference/segments/createAudience",
+              "api-reference/segments/audienceList",
+              "api-reference/segments/updateAudience",
+              "api-reference/segments/deleteAudience",
+              "api-reference/segments/bulkUpload"
+            ]
+          },
+          {
+            "group": "Campaigns",
+            "pages": [
+              "api-reference/campaigns/get",
+              "api-reference/campaigns/create",
+              "api-reference/campaigns/audienceList"
+            ]
+          },
+          {
+            "group": "Knowladge Base",
+            "pages": [
+              "api-reference/knowledgebase/get",
+              "api-reference/knowledgebase/create",
+              "api-reference/knowledgebase/update",
+              "api-reference/knowledgebase/delete"
             ]
           }
         ]
@@ -71,14 +200,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Dashboard",
+          "href": "https://platform.awazindia.ai/admin/dashboard",
+          "icon": "house"
         }
       ]
     }
@@ -91,13 +215,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@awazindia.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://platform.awazindia.ai/admin/dashboard"
     }
   },
   "contextual": {
@@ -111,12 +235,5 @@
      "cursor",
      "vscode"
    ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }
